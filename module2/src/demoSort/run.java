@@ -1,4 +1,4 @@
-package demo;
+package demoSort;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package demo;
+package demoSort;
 
 public class demo {
     public static final int Not_found = -1;

@@ -1,4 +1,4 @@
-package demo;
+package demoSort;
 
 public class sapxepchon {
     public static void insertionSort(int [] arr){
