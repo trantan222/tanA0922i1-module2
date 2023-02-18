@@ -48,17 +48,18 @@ public class ProductManager {
     }
     // sắp xếp tu cao đến thấp
     public void Sort(){
-        Collections.sort(productArrayList, new Comparator<Product>() {
-            @Override
-            public int compare(Product o1, Product o2) {
-                if(o1.getCost() > o2.getCost()){
-                    return 1;
-                }else if(o2.getCost() < o1.getCost()){
-                    return -1;
-                }
-                return 0;
-            }
-        });
+       Collections.sort(productArrayList, new Comparator<Product>() {
+           @Override
+           public int compare(Product o1, Product o2) {
+               if(o1.getCost() > o2.getCost()){
+                   return 1;
+               }else if(o1.getCost() <  o2.getCost()){
+                   return -1;
+               }else {
+                   return 0;
+               }
+           }
+       });
 
     }
 

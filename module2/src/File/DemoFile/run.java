@@ -17,7 +17,7 @@ public class run {
               list.add(new mark(3));
               list.add(new mark(3));
               list.add(new mark(3));
-              fIleRead.writeFile(".\\src\\File\\mark.csv",list);
+              fIleRead.writeFile(".\\src\\File\\list.csv",list);
               fIleRead.ReadFile("C:\\tan\\New folder\\cong.txt");
 
 
