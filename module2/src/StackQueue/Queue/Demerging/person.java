@@ -1,9 +1,8 @@
-package StackQueue.Demerging;
+package StackQueue.Queue.Demerging;
 
 import java.time.LocalDate;
-import java.util.Date;
 
-public class person {
+public class person implements Comparable<person>{
    private String name;
    private String gender;
    private LocalDate date;
@@ -12,6 +11,9 @@ public class person {
         this.name = name;
         this.gender = gender;
         this.date = date;
+    }
+
+    public person() {
     }
 
     public String getName() {
@@ -36,5 +38,19 @@ public class person {
 
     public void setDate(LocalDate date) {
         this.date = date;
+    }
+
+    @Override
+    public String toString() {
+        return "person{" +
+                "name='" + name + '\'' +
+                ", gender='" + gender + '\'' +
+                ", date=" + date +
+                '}';
+    }
+
+    @Override
+    public int compareTo(person o) {
+        return this.date.compareTo(o.date);
     }
 }

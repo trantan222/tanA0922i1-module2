@@ -1,4 +1,4 @@
-package StackQueue;
+package StackQueue.Stack;
 
 import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 
