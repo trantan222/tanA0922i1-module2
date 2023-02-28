@@ -1,8 +1,8 @@
-package CaseStudy.FuramaResort.models;
+package CaseStudy.FuramaResort.models.person;
 
 import java.time.LocalDate;
 
-public class person {
+public abstract class person {
     private String ma;
     private String hoTen;
     private LocalDate date;
@@ -10,13 +10,16 @@ public class person {
     private int soDt;
     private String email;
 
-    public person(String ma, String hoTen, LocalDate date, int CMND, int soDt, String email) {
+    private String gender;
+
+    public person(String ma, String hoTen, LocalDate date, int CMND, int soDt, String email, String gender) {
         this.ma = ma;
         this.hoTen = hoTen;
         this.date = date;
         this.CMND = CMND;
         this.soDt = soDt;
         this.email = email;
+        this.gender = gender;
     }
 
     public String getMa() {
@@ -65,6 +68,14 @@ public class person {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     @Override

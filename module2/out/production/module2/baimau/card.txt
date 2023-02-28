@@ -1,0 +1,1 @@
+ATM{numCard=12, name='ta', CMND=22, address='44'soDu=0}

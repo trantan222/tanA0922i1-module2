@@ -1,4 +1,6 @@
 package CaseStudy.FuramaResort.services;
 
-public interface EmployeeService extends service{
+import CaseStudy.FuramaResort.models.person.person;
+
+public interface EmployeeService<E extends person> extends service{
 }

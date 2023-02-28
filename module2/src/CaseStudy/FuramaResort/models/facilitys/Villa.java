@@ -1,4 +1,4 @@
-package CaseStudy.FuramaResort.models;
+package CaseStudy.FuramaResort.models.facilitys;
 
 import java.time.LocalDate;
 
