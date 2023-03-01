@@ -9,20 +9,19 @@ import java.util.Map;
 
 public class ReadFileATMCreditCard {
     public static final String REGEX = ",";
-    public ArrayList<ATm> readFIleATm(String path) {
-        ArrayList<ATm> aTmArrayList = new ArrayList<>();
-        try(BufferedReader reader = new BufferedReader(new FileReader(path))){
-            String line = "";
-            while ((line = reader.readLine()) != null) {
-                ATm aTm = new ATm(line.split(REGEX));
-                aTmArrayList.add(aTm);
+    public static ArrayList<String> readFile (String path){
+        ArrayList<String> listAtm = new ArrayList<>();
+        try(BufferedReader bufferedReader =new BufferedReader(new FileReader(path))) {
+            String line ="";
+            while ((line = bufferedReader.readLine())!= null){
+                listAtm.add(line.trim());
             }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        return aTmArrayList;
+        return listAtm;
     }
 //    public ArrayList<String> readCreditCard(String path) {
 //        ArrayList<String> creditCards = new ArrayList<>();

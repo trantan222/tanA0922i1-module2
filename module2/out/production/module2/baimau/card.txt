@@ -1,1 +1,1 @@
-ATM{numCard=12, name='ta', CMND=22, address='44'soDu=0}
+ATM{numCard=1, name='da', CMND=11, address='ta'soDu=0}

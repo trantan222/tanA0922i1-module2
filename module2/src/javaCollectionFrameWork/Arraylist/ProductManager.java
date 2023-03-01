@@ -39,7 +39,7 @@ public class ProductManager {
             System.out.println(product.toString());
         }
     }
-    public void find(String name ){
+    public void find(String name){
         for(Product product : productArrayList){
             if(name.equalsIgnoreCase(product.getName())){
                 System.out.println(product);
