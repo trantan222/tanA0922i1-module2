@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class ATm extends Card{
     private int soDu;
-
-    public ATm(int numCard, String name, int CMND, String address,int soDu) {
-        super(numCard, name, CMND, address);
+    public static int id = 0;
+    public ATm(int id ,int numCard, String name, int CMND, String address,int soDu) {
+        super(id,numCard, name, CMND, address);
         this.soDu = 0;
     }
 
@@ -31,6 +31,7 @@ public class ATm extends Card{
     @Override
     public String toString() {
         return "ATM{" +
+                "id ="+getId()+
                 "numCard=" + getNumCard() +
                 ", name='" + getName() + '\'' +
                 ", CMND=" + getCMND() +
@@ -38,7 +39,19 @@ public class ATm extends Card{
                 "soDu=" + soDu +
                 '}';
     }
+
+    public String toStringFile(){
+        return getId() +","+
+                getNumCard() + "," +
+                getName() + "," +
+                getCMND() + "," +
+                getAddress() + "," +
+                soDu;
+
+    }
+
     public void inputATM(){
+        setId(++id);
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập số thẻ :");
         int numCard = scanner.nextInt();

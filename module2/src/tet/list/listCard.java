@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class listCard {
+    private static int id = 0;
     public void dangkiThe(){
         ArrayList<ATm> aTmArrayList = new ArrayList<>();
         ArrayList<CreditCard> creditCards = new ArrayList<>();
@@ -29,7 +30,7 @@ public class listCard {
                         scanner.nextLine();
                         System.out.println("Nhập Địa chỉ :");
                         String address = scanner.nextLine();
-                        ATm aTm = new ATm(numCard,name,CMND,address,0);
+                        ATm aTm = new ATm(++id,numCard,name,CMND,address,0);
                         aTmArrayList.add(aTm);
                         System.out.println("Đăng kí thẻ atm thành công ");
                         break;
@@ -44,7 +45,7 @@ public class listCard {
                     String address1 = scanner.nextLine();
                     System.out.println("Nhập vào hạn mức ");
                     int hanMuc = scanner.nextInt();
-                    CreditCard creditCard = new CreditCard(numCard1,name1,CMND1,address1,0,hanMuc);
+                    CreditCard creditCard = new CreditCard(++id,numCard1,name1,CMND1,address1,0,hanMuc);
                     creditCards.add(creditCard);
                     System.out.println("đăng kí thẻ credit thành công");
                     break;

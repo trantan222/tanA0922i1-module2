@@ -7,26 +7,25 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class chucNangCreditCard {
-    private static ArrayList<CreditCard> creditCards;
-
-    public chucNangCreditCard(ArrayList<CreditCard> creditCards) {
-        this.creditCards = creditCards;
-    }
-    public chucNangCreditCard() {
-        creditCards = new ArrayList<>();
-    }
+    public static final String path = "D:\\A0922i1-tan\\module2\\src\\baimau\\card.txt";
+    static ArrayList<CreditCard> creditCards = new ArrayList<>();
+//    public chucNangCreditCard(ArrayList<CreditCard> creditCards) {
+//        this.creditCards = creditCards;
+//    }
+//    public chucNangCreditCard() {
+//        creditCards = new ArrayList<>();
+//    }
     public void addCard(){
         CreditCard creditCard = new CreditCard();
         creditCard.inputCreditCard();
         creditCards.add(creditCard);
     }
     public static void WriteCreditCard(){
-       WriteFileATMCreditCard creditCard = new WriteFileATMCreditCard();
-       creditCard.WriteFileCreditCard("D:\\A0922i1-tan\\module2\\src\\baimau\\card.txt",creditCards);
+        WriteFileATMCreditCard.WriteFileCreditCard(path,creditCards);
     }
     public static void ReadCreditCard(){
-        ReadFileATMCreditCard readFileCreditCard = new ReadFileATMCreditCard();
-        readFileCreditCard.readFile("D:\\A0922i1-tan\\module2\\src\\baimau\\card.txt").forEach(System.out::println);
+        ReadFileATMCreditCard.readFile(path);
+
     }
     public static void payCreditCard(){
         Scanner scanner = new Scanner(System.in);
@@ -63,7 +62,7 @@ public class chucNangCreditCard {
         String hoVaTen = scanner.nextLine();
         for(CreditCard creditCard : creditCards){
             if(creditCard.getName().trim().lastIndexOf(hoVaTen) >=0){
-                creditCard.toString();
+                System.out.println(creditCard);
             }
         }
     }

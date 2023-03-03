@@ -3,18 +3,20 @@ package baimau.model;
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
-public class CreditCard extends Card{
+public class CreditCard extends Card {
     private int duNo;
     private int hanMuc;
-    public CreditCard(int numCard, String name, int CMND, String address,int duNo,int hanMuc) {
-        super(numCard, name, CMND, address);
+
+    public CreditCard(int id,int numCard, String name, int CMND, String address, int duNo, int hanMuc) {
+        super(id,numCard, name, CMND, address);
         this.duNo = 0;
         this.hanMuc = hanMuc;
     }
 
     public CreditCard() {
     }
-    public CreditCard(String arr[]){
+
+    public CreditCard(String arr[]) {
         this.setNumCard(Integer.parseInt(arr[0]));
         this.setName(arr[1]);
         this.setCMND(Integer.parseInt(arr[2]));
@@ -39,9 +41,22 @@ public class CreditCard extends Card{
         this.hanMuc = hanMuc;
     }
 
+
+    public String toStringFile() {
+        return getId() +"," +
+                getNumCard() + "," +
+                getName() + "," +
+                getCMND() + "," +
+                getAddress() + "," +
+                duNo + "," +
+                hanMuc;
+
+    }
+
     @Override
     public String toString() {
         return "CreditCard{" +
+                "id=" +getId()+
                 "numCard=" + getNumCard() +
                 ", name='" + getName() + '\'' +
                 ", CMND=" + getCMND() +
@@ -50,7 +65,7 @@ public class CreditCard extends Card{
                 ", hanMuc=" + hanMuc +
                 '}';
     }
-    public void inputCreditCard(){
+    public void inputCreditCard() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập số thẻ :");
         int numCard = scanner.nextInt();
@@ -73,5 +88,6 @@ public class CreditCard extends Card{
         System.out.println("Nhập vào hạn mức ");
         int hanMuc = scanner.nextInt();
         this.setHanMuc(hanMuc);
+        setId(++ATm.id);
     }
 }

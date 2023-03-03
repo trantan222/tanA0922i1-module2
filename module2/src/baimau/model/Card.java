@@ -1,16 +1,28 @@
 package baimau.model;
 
 public abstract class Card {
+
+    private int id;
     private int numCard;
     private String name;
     private int CMND;
     private String address;
 
-    public Card(int numCard, String name, int CMND, String address) {
+
+    public Card(int id ,int numCard, String name, int CMND, String address) {
+        this.id = id;
         this.numCard = numCard;
         this.name = name;
         this.CMND = CMND;
         this.address = address;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Card() {

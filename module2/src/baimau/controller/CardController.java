@@ -6,6 +6,7 @@ import baimau.chucnang.chucnangATM;
 import java.util.Scanner;
 
 public class CardController {
+
     private static void displayMainMenu(){
         Scanner scanner = new Scanner(System.in);
         int choose;
@@ -26,7 +27,7 @@ public class CardController {
                     break;
                 case 2: {
                    chucnangATM.WriteATM();
-                   chucNangCreditCard.WriteCreditCard();
+//                   chucNangCreditCard.WriteCreditCard();
                    break;
                 }
                 case 3:{
@@ -81,7 +82,7 @@ public class CardController {
                     break;
                 }
                 case 3:{
-                    return;
+                    break;
                 }
             }
         }while (choose !=3);
